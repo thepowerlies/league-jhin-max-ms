@@ -1,20 +1,79 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container">
+  <div class="note">note: the calculated MS is based on the formula that is shown by game.
+    the game actually reduces the passive effect as you get more MS so the calculated MS here is higher than in game amount</div>
+  <div>
+    <mat-radio-group [(ngModel)]="precision">
+      Precision:
+      <mat-radio-button value="none">None</mat-radio-button> |
+      <mat-radio-button value="fleet">
+        Fleet footwork
+        <img src="assets/img/Fleet_Footwork_rune.png" class="icon"/>
+      </mat-radio-button> |
+      <mat-radio-button value="lethal">
+        Lethal tempo
+        <img src="assets/img/Lethal_Tempo_rune.png" class="icon"/>
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div>
+    <mat-checkbox [(ngModel)]="alacrity">
+      Legends Alacrity
+      <img src="assets/img/Legend-_Alacrity_rune.png" class="icon"/>
+    </mat-checkbox> |
+    <mat-checkbox [(ngModel)]="runeAs">
+      Rune + 10% attack speed
+    </mat-checkbox>
+  </div>
 
+  <div>
+    Sorcery:
+    <mat-checkbox [(ngModel)]="celerity">Celerity <img src="assets/img/Celerity_rune.png" class="icon"/></mat-checkbox> |
+    <mat-checkbox [(ngModel)]="waterWalking">Water Walking <img src="assets/img/Waterwalking_rune.png" class="icon"/></mat-checkbox>
+  </div>
+  <div>
+    Summoners:
+    <mat-checkbox [(ngModel)]="ghost">Ghost   <img src="assets/img/ghost.png" class="icon"/></mat-checkbox>
+  </div>
+
+  <div>
+    Allow items:
+
+    <mat-checkbox [(ngModel)]="allowRighteous">
+      Righteous Glory
+      <img src="assets/img/Righteous_Glory_item.png" class="icon"/>
+    </mat-checkbox> |
+    <mat-checkbox [(ngModel)]="allowRot">
+      Zz'Rot Portal
+      <img src="assets/img/ZzRot_Portal_item.png" class="icon"/>
+    </mat-checkbox>
+  </div>
+  <div>
+    <mat-radio-group [(ngModel)]="filterBy">
+      Filter by:
+      <mat-radio-button value="ms">Movement speed</mat-radio-button>
+      <mat-radio-button value="cost">Cost</mat-radio-button>
+      <mat-radio-button value="efficiency">Efficiency</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+
+
+  <div>
+    <button mat-raised-button (click)="find()">Find</button>
+  </div>
+
+  <div class="list">
+    <div class="item" *ngFor="let row of results; let i = index">
+      <span class="index">{{i+1}}</span>
+      <img *ngFor="let item of row.items" [src]="item.img"/>
+      <span> {{row.ms}}<img src="assets/img/ghost.png" class="icon"/> | </span>
+      <span>{{row.cost}} <img src="assets/img/gold.png" class="icon"/></span>
+      <span>efficiency: {{row.efficiency}}</span>
+<!--      <span>percent: {{row.percent}}</span>-->
+<!--      <span>pass: {{row.passive}}</span>-->
+<!--      <span>flat: {{row.flat}}</span>-->
+    </div>
+
+  </div>
+
+</div>
