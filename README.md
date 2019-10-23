@@ -4,7 +4,7 @@
 
 This is a web app that shows movements speed builds for league of legends champion [Jhin](https://na.leagueoflegends.com/en/game-info/champions/jhin/).
 
-[Demo](http://jhin-max-ad.thepowerlies.com)
+[Demo](https://thepowerlies.github.io/league-jhin-max-ms/)
 
 ![Screenshot](https://user-images.githubusercontent.com/20861442/67385790-9da63a00-f5a0-11e9-8fc3-adc6d7aaafd6.png)
 
