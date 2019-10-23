@@ -1,27 +1,11 @@
 # JhinMaxMs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+![Jhin](https://ddragon.leagueoflegends.com/cdn/9.20.1/img/champion/Jhin.png)
 
-## Development server
+This is a web app that shows movements speed builds for league of legends champion [Jhin](https://na.leagueoflegends.com/en/game-info/champions/jhin/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[Demo](http://jhin-max-ad.thepowerlies.com)
 
-## Code scaffolding
+![Screenshot](https://user-images.githubusercontent.com/20861442/67385790-9da63a00-f5a0-11e9-8fc3-adc6d7aaafd6.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Compatible with LOL patch 9.20
